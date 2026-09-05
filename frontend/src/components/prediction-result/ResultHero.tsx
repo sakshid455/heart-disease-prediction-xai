@@ -1,5 +1,5 @@
 import React from 'react'
-import { AlertTriangle, CheckCircle2, ShieldAlert, Sparkles, Brain } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, ShieldAlert, Sparkles, Brain, Info } from 'lucide-react'
 import { PredictionResult } from '../../services/api'
 
 export interface ResultHeroProps {
@@ -9,9 +9,56 @@ export interface ResultHeroProps {
 export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
   const probPercent = Math.round(result.probability * 100)
   
-  // Categorize as "Low Risk" or "Elevated Risk" as specified
-  const isElevated = result.probability >= 0.45
-  const statusLabel = isElevated ? 'Elevated Risk' : 'Low Risk'
+  // 3-Tier Clinical Risk Classification:
+  // High Risk: >= 70%
+  // Moderate / Borderline Risk: 45% - 69%
+  // Low Risk: < 45%
+  const isHigh = result.probability >= 0.70
+  const isModerate = result.probability >= 0.45 && result.probability < 0.70
+  const isLow = result.probability < 0.45
+
+  const tier = isHigh ? 'high' : isModerate ? 'moderate' : 'low'
+
+  const tierConfig = {
+    high: {
+      statusLabel: 'High Risk',
+      badgeClass: 'bg-[#C87868]/15 text-[#A24D3D] border-[#C87868]/40',
+      ringColor: '#C87868',
+      textColor: 'text-[#C87868]',
+      glowClass: 'bg-[#C87868]/15',
+      icon: AlertTriangle,
+      iconColor: 'text-[#C87868]',
+      heading: 'Elevated Cardiovascular Risk Pattern',
+      description:
+        'The predictive model identified substantial clinical indicators that correlate with an elevated likelihood of cardiovascular disease across validated epidemiological cohorts.',
+    },
+    moderate: {
+      statusLabel: 'Moderate Risk (Borderline)',
+      badgeClass: 'bg-amber-100/90 text-amber-900 border-amber-300',
+      ringColor: '#D97706',
+      textColor: 'text-amber-700',
+      glowClass: 'bg-amber-500/15',
+      icon: AlertTriangle,
+      iconColor: 'text-amber-600',
+      heading: 'Moderate / Borderline Risk Pattern',
+      description:
+        'The predictive model placed this profile in an intermediate risk bracket. Key cardiovascular risk indicators are partially balanced against favorable diagnostic markers.',
+    },
+    low: {
+      statusLabel: 'Low Risk',
+      badgeClass: 'bg-[#E8EEE8] text-[#17352D] border-[#3D8068]/40',
+      ringColor: '#3D8068',
+      textColor: 'text-[#23493E]',
+      glowClass: 'bg-[#3D8068]/12',
+      icon: CheckCircle2,
+      iconColor: 'text-[#3D8068]',
+      heading: 'Low Cardiovascular Risk Profile',
+      description:
+        'Based on the entered biomarkers, the algorithm evaluated a low statistical likelihood of obstructive coronary heart disease.',
+    },
+  }[tier]
+
+  const StatusIcon = tierConfig.icon
 
   // SVG Circular Gauge Dimensions
   const radius = 78
@@ -43,9 +90,7 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
           
           {/* Subtle background glow tailored to risk */}
           <div
-            className={`absolute top-0 right-0 w-80 h-80 rounded-full blur-[90px] pointer-events-none ${
-              isElevated ? 'bg-[#C87868]/15' : 'bg-[#3D8068]/12'
-            }`}
+            className={`absolute top-0 right-0 w-80 h-80 rounded-full blur-[90px] pointer-events-none ${tierConfig.glowClass}`}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -68,7 +113,7 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
                     cx="100"
                     cy="100"
                     r={radius}
-                    stroke={isElevated ? '#C87868' : '#3D8068'}
+                    stroke={tierConfig.ringColor}
                     strokeWidth="16"
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
@@ -84,9 +129,7 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
                     Probability
                   </span>
                   <span
-                    className={`text-4xl sm:text-5xl font-serif font-bold tracking-tight my-0.5 ${
-                      isElevated ? 'text-[#C87868]' : 'text-[#23493E]'
-                    }`}
+                    className={`text-4xl sm:text-5xl font-serif font-bold tracking-tight my-0.5 ${tierConfig.textColor}`}
                   >
                     {probPercent}%
                   </span>
@@ -102,7 +145,7 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
                   Model Risk Probability
                 </div>
                 <div className="text-[11px] text-[#808C85] font-mono mt-0.5">
-                  Threshold: 45% Elevated Risk
+                  Tiers: Low (&lt;45%) | Moderate (45-69%) | High (&ge;70%)
                 </div>
               </div>
             </div>
@@ -113,18 +156,10 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
               {/* Risk Badge */}
               <div className="flex items-center gap-3">
                 <span
-                  className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide border shadow-2xs font-mono ${
-                    isElevated
-                      ? 'bg-[#C87868]/15 text-[#A24D3D] border-[#C87868]/40'
-                      : 'bg-[#E8EEE8] text-[#17352D] border-[#3D8068]/40'
-                  }`}
+                  className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide border shadow-2xs font-mono ${tierConfig.badgeClass}`}
                 >
-                  {isElevated ? (
-                    <AlertTriangle className="w-4 h-4 text-[#C87868]" />
-                  ) : (
-                    <CheckCircle2 className="w-4 h-4 text-[#3D8068]" />
-                  )}
-                  <span>Prediction: {statusLabel}</span>
+                  <StatusIcon className={`w-4 h-4 ${tierConfig.iconColor}`} />
+                  <span>Prediction: {tierConfig.statusLabel}</span>
                 </span>
                 
                 <span className="text-xs font-mono text-[#808C85] hidden sm:inline">
@@ -134,16 +169,23 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
 
               {/* Summary Statement */}
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#17352D] leading-tight">
-                {isElevated
-                  ? 'Elevated Cardiovascular Risk Pattern'
-                  : 'Low Cardiovascular Risk Profile'}
+                {tierConfig.heading}
               </h2>
 
               <p className="text-sm text-[#4A5550] leading-relaxed">
-                {isElevated
-                  ? 'The predictive model identified clinical indicators that correlate with an elevated likelihood of cardiovascular disease across validated epidemiological cohorts.'
-                  : 'Based on the entered biomarkers, the algorithm evaluated a low statistical likelihood of coronary heart disease.'}
+                {tierConfig.description}
               </p>
+
+              {/* Intermediate / Borderline Explanation if in moderate zone */}
+              {isModerate && (
+                <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80 text-xs text-amber-950 flex items-start gap-2.5">
+                  <Info className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                  <div className="leading-relaxed">
+                    <strong className="text-amber-900">Clinical Intermediate Insight:</strong>{' '}
+                    A score of {probPercent}% reflects mixed diagnostic findings. Risk elevations (such as blood pressure, cholesterol, or fluoroscopy vessels) are statistically counterbalanced by protective biomarkers (such as a normal thallium scan or high exercise heart rate). Cardiologist evaluation is recommended.
+                  </div>
+                </div>
+              )}
 
               {/* Crucial Ethical / ML Disclaimer Label */}
               <div className="p-3.5 rounded-xl bg-[#FAF8F4] border border-[#D9C7A5]/70 text-xs text-[#5C6661] flex items-start gap-2.5">
@@ -163,3 +205,4 @@ export const ResultHero: React.FC<ResultHeroProps> = ({ result }) => {
     </section>
   )
 }
+

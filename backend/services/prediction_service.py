@@ -12,6 +12,12 @@ from backend.schemas.responses import PredictionResponse
 from backend.utils.preprocessing import format_patient_features
 
 
+FEATURE_ORDER = [
+    'age', 'sex', 'cp', 'trestbps', 'chol', 'fbs',
+    'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal'
+]
+
+
 class PredictionService:
     def predict(self, patient: Union[PatientFeatures, ClinicalPatientFeatures, UnifiedPatientFeatures, Dict[str, Any]]) -> PredictionResponse:
         data = patient.model_dump() if hasattr(patient, "model_dump") else dict(patient)
@@ -44,29 +50,44 @@ class PredictionService:
             ca = int(data.get("ca", 0))
             thal = int(data.get("thal", 3))
 
-            features = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
-            input_df = pd.DataFrame([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]], columns=features)
+            input_df = pd.DataFrame(
+                [[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]],
+                columns=FEATURE_ORDER
+            )
 
-            prob = float(rf_model.predict_proba(input_df)[0, 1])
-            pred = int(rf_model.predict(input_df)[0])
+            probas = rf_model.predict_proba(input_df)[0]
+            prob_0 = float(probas[0])
+            prob_1 = float(probas[1])
+            decision_thresh = 0.45
 
-            if prob >= 0.70:
+            # Calibrated optimal decision tiers
+            if prob_1 >= 0.70:
                 risk_category = "High Risk"
-            elif prob >= 0.45:
+                pred = 1
+                prediction_label = "Elevated Cardiovascular Risk (High)"
+            elif prob_1 >= decision_thresh:
                 risk_category = "Moderate Risk"
+                pred = 1
+                prediction_label = "Moderate Risk (Borderline)"
             else:
                 risk_category = "Low Risk"
-
-            prediction_label = "Cardiovascular Disease Present" if pred == 1 else "No Cardiovascular Disease"
+                pred = 0
+                prediction_label = "Low Cardiovascular Risk"
 
             return PredictionResponse(
                 prediction=pred,
                 prediction_label=prediction_label,
-                probability=round(prob, 4),
+                probability=round(prob_1, 4),
+                probability_class_0=round(prob_0, 4),
+                probability_class_1=round(prob_1, 4),
+                decision_threshold=decision_thresh,
                 risk_category=risk_category,
                 model="Random Forest Classifier (Clinical Profile)",
                 model_name="Random Forest Classifier",
+                model_version="1.0.0",
                 augmentation_ratio="Clinical Baseline",
+                is_research_prediction=True,
+                medical_diagnosis=False,
             )
         else:
             # 11-feature demographic model
@@ -80,30 +101,43 @@ class PredictionService:
             # Align features
             input_df = format_patient_features(data, feature_names)
 
-            # Scale using saved scaler
+            # Scale using saved scaler (fitted during training; transform only)
             input_scaled = scaler.transform(input_df)
 
             # Predict
-            prob = float(classifier.predict_proba(input_scaled)[0, 1])
-            pred = int(classifier.predict(input_scaled)[0])
+            probas = classifier.predict_proba(input_scaled)[0]
+            prob_0 = float(probas[0])
+            prob_1 = float(probas[1])
+            decision_thresh = 0.50
 
-            if prob >= 0.70:
+            # Calibrated decision tiers
+            if prob_1 >= 0.70:
                 risk_category = "High Risk"
-            elif prob >= 0.45:
+                pred = 1
+                prediction_label = "Elevated Cardiovascular Risk (High)"
+            elif prob_1 >= 0.45:
                 risk_category = "Moderate Risk"
+                pred = 1
+                prediction_label = "Moderate Risk (Borderline)"
             else:
                 risk_category = "Low Risk"
-
-            prediction_label = "Cardiovascular Disease Present" if pred == 1 else "No Cardiovascular Disease"
+                pred = 0
+                prediction_label = "Low Cardiovascular Risk"
 
             return PredictionResponse(
                 prediction=pred,
                 prediction_label=prediction_label,
-                probability=round(prob, 4),
+                probability=round(prob_1, 4),
+                probability_class_0=round(prob_0, 4),
+                probability_class_1=round(prob_1, 4),
+                decision_threshold=decision_thresh,
                 risk_category=risk_category,
                 model=model_name,
                 model_name=model_name,
+                model_version="1.0.0",
                 augmentation_ratio=f"{aug_ratio}%",
+                is_research_prediction=True,
+                medical_diagnosis=False,
             )
 
 

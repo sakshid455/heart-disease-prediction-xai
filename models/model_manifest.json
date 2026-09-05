@@ -1,0 +1,44 @@
+{
+  "model_name": "Random Forest Classifier (Clinical Profile)",
+  "model_type": "RandomForestClassifier",
+  "model_version": "1.0.0",
+  "dataset": "UCI Cleveland Heart Disease Dataset",
+  "augmentation_ratio": "0% (Baseline Real Training Data)",
+  "training_samples": 242,
+  "test_samples": 61,
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "target_column": "num",
+  "target_mapping": {
+    "0": "No Heart Disease",
+    "1": "Heart Disease Present"
+  },
+  "random_seed": 42,
+  "preprocessor": "Mode Imputation for ca and thal, raw integer/float features",
+  "decision_threshold": 0.45,
+  "calibrated_thresholds": {
+    "low_risk_upper": 0.45,
+    "moderate_risk_upper": 0.7,
+    "high_risk_lower": 0.7
+  },
+  "metrics_on_untouched_test_set": {
+    "accuracy": 0.8852,
+    "precision": 0.8182,
+    "recall": 0.9643,
+    "f1_score": 0.8852,
+    "roc_auc": 0.9551
+  }
+}

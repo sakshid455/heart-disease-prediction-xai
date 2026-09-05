@@ -103,10 +103,16 @@ class PredictionResponse(BaseModel):
     prediction: int = Field(..., description="0 for No CVD, 1 for CVD Present", example=1)
     prediction_label: str = Field(..., example="Cardiovascular Disease Present")
     probability: float = Field(..., description="Posterior probability score (0.0 to 1.0)", example=0.826)
+    probability_class_0: float = Field(default=0.174, description="Posterior probability of class 0 (No Disease)", example=0.174)
+    probability_class_1: float = Field(default=0.826, description="Posterior probability of class 1 (Disease Present)", example=0.826)
+    decision_threshold: float = Field(default=0.45, description="Calibrated classification decision threshold", example=0.45)
     risk_category: str = Field(..., example="High Risk")
     model: str = Field(..., example="Logistic Regression")
     model_name: str = Field(default="Logistic Regression", example="Logistic Regression")
+    model_version: str = Field(default="1.0.0", example="1.0.0")
     augmentation_ratio: str = Field(..., example="200%")
+    is_research_prediction: bool = Field(default=True, description="Indicates prediction is from a research model")
+    medical_diagnosis: bool = Field(default=False, description="Explicit flag affirming output is NOT a medical diagnosis")
 
 
 class FeatureContribution(BaseModel):

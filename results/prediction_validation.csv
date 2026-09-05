@@ -1,0 +1,16 @@
+sample_id,expected_target,direct_prediction,api_prediction,direct_probability,api_probability,prediction_match,probability_difference
+0,0,0,0,0.24,0.24,MATCH,0.0
+1,0,1,1,0.69,0.69,MATCH,0.0
+2,0,0,0,0.07,0.07,MATCH,0.0
+3,0,0,0,0.1,0.1,MATCH,0.0
+4,0,0,0,0.32,0.32,MATCH,0.0
+5,0,0,0,0.29,0.29,MATCH,0.0
+6,0,0,0,0.28,0.28,MATCH,0.0
+7,0,0,0,0.31,0.31,MATCH,0.0
+8,1,1,1,0.67,0.67,MATCH,0.0
+9,0,0,0,0.22,0.22,MATCH,0.0
+10,1,1,1,0.77,0.77,MATCH,0.0
+11,0,0,0,0.2,0.2,MATCH,0.0
+12,0,0,0,0.02,0.02,MATCH,0.0
+13,1,1,1,0.61,0.61,MATCH,0.0
+14,1,1,1,0.87,0.87,MATCH,0.0

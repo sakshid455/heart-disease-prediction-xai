@@ -110,10 +110,16 @@ export interface PredictionResult {
   prediction: number
   prediction_label: string
   probability: number
+  probability_class_0?: number
+  probability_class_1?: number
+  decision_threshold?: number
   risk_category: string
   model: string
   model_name?: string
+  model_version?: string
   augmentation_ratio: string
+  is_research_prediction?: boolean
+  medical_diagnosis?: boolean
 }
 
 export interface FeatureContribution {
