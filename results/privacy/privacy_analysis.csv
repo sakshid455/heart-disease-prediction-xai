@@ -1,0 +1,15 @@
+metric,value,interpretation
+Exact Duplicates (Synthetic vs Real Train),452.0,Identical profiles across 11 discrete/binned physiological attributes
+Exact Duplicate Percentage,0.4117,Percentage of synthetic set exactly matching a real training patient
+DCR(Synthetic -> Real Train) Mean,0.4782,Average Euclidean distance from a synthetic patient to closest real train patient
+DCR(Synthetic -> Real Train) Median,0.348,Median Euclidean distance to closest real training patient
+DCR(Synthetic -> Real Train) 5th Percentile,0.0715,5% closest synthetic records to real training patients
+DCR(Synthetic -> Real Train) Minimum,0.0,Minimum Euclidean distance from any synthetic patient to training cohort
+DCR(Synthetic -> Real Test) Mean,0.67,Average Euclidean distance to quarantined real test patients
+DCR(Synthetic -> Real Test) Median,0.5461,Median Euclidean distance to quarantined real test patients
+DCR(Real Train -> Real Train Baseline) Mean,0.3796,Natural density baseline distance between real training patients
+DCR(Real Train -> Real Train Baseline) Median,0.2646,Natural density median baseline distance within real training cohort
+Mean NNDR (Nearest Neighbor Distance Ratio),0.7655,Ratio of 1st NN to 2nd NN distance (higher indicates smooth manifold)
+NNDR < 0.20 (Suspicious Memorization Outliers),180.0,Records isolated extremely close to a single training patient
+NNDR < 0.20 Percentage,1.8,Proportion of potential memorized sample candidates
+DCR Ratio: (Synth->Train) / (Synth->Test),0.7137,Ratio close to 1.0 indicates synthetic data generalizes equally to unseen patients

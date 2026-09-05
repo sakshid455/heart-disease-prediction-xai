@@ -1,0 +1,34 @@
+{
+  "project_name": "HeartAI",
+  "project_title": "Adaptive CTGAN-Based Synthetic Data Augmentation for Explainable Heart Disease Prediction",
+  "primary_random_seed": 42,
+  "robustness_random_seeds": [42, 52, 62, 72, 82],
+  "train_test_split_ratio": 0.20,
+  "stratified_split": true,
+  "augmentation_ratios": [0.0, 0.25, 0.50, 0.75, 1.0, 1.5, 2.0],
+  "dataset_paths": {
+    "large_raw": "data/raw/cardio_train.csv",
+    "large_clean": "data/processed/large_clean.csv",
+    "large_train": "data/processed/large_train.csv",
+    "large_test": "data/processed/large_test.csv",
+    "uci_clean": "data/processed/heart_disease_clean.csv"
+  },
+  "features": {
+    "numerical": ["age", "height", "weight", "ap_hi", "ap_lo"],
+    "categorical": ["gender", "cholesterol", "gluc", "smoke", "alco", "active"],
+    "target": "cardio"
+  },
+  "clinical_weights": {
+    "recall": 0.40,
+    "roc_auc": 0.30,
+    "f1_score": 0.30
+  },
+  "directories": {
+    "models": "models",
+    "results": "results",
+    "final_experiment": "results/final_experiment",
+    "final_tables": "results/final_tables",
+    "final_figures": "results/final_figures",
+    "cross_dataset": "results/cross_dataset"
+  }
+}

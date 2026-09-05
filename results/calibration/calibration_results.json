@@ -1,0 +1,291 @@
+{
+  "model": "Logistic Regression",
+  "n_bins": 10,
+  "baseline": {
+    "model": "Logistic Regression (Baseline)",
+    "brier_score": 0.191603,
+    "expected_calibration_error": 0.039927,
+    "maximum_calibration_error": 0.102446,
+    "calibration_curve": [
+      {
+        "pred": 0.0709,
+        "true": 0.1071
+      },
+      {
+        "pred": 0.154,
+        "true": 0.183
+      },
+      {
+        "pred": 0.251,
+        "true": 0.2226
+      },
+      {
+        "pred": 0.3502,
+        "true": 0.3452
+      },
+      {
+        "pred": 0.45,
+        "true": 0.4103
+      },
+      {
+        "pred": 0.5478,
+        "true": 0.6502
+      },
+      {
+        "pred": 0.6473,
+        "true": 0.6866
+      },
+      {
+        "pred": 0.7509,
+        "true": 0.8103
+      },
+      {
+        "pred": 0.8523,
+        "true": 0.8397
+      },
+      {
+        "pred": 0.9418,
+        "true": 0.8483
+      }
+    ],
+    "bins": [
+      {
+        "bin_index": 0,
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "samples": 56,
+        "fraction_of_positives": 0.1071,
+        "mean_predicted_prob": 0.0709,
+        "calibration_gap": 0.0362
+      },
+      {
+        "bin_index": 1,
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "samples": 224,
+        "fraction_of_positives": 0.183,
+        "mean_predicted_prob": 0.154,
+        "calibration_gap": 0.029
+      },
+      {
+        "bin_index": 2,
+        "bin_lower": 0.2,
+        "bin_upper": 0.3,
+        "samples": 337,
+        "fraction_of_positives": 0.2226,
+        "mean_predicted_prob": 0.251,
+        "calibration_gap": 0.0285
+      },
+      {
+        "bin_index": 3,
+        "bin_lower": 0.3,
+        "bin_upper": 0.4,
+        "samples": 420,
+        "fraction_of_positives": 0.3452,
+        "mean_predicted_prob": 0.3502,
+        "calibration_gap": 0.0049
+      },
+      {
+        "bin_index": 4,
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "samples": 368,
+        "fraction_of_positives": 0.4103,
+        "mean_predicted_prob": 0.45,
+        "calibration_gap": 0.0397
+      },
+      {
+        "bin_index": 5,
+        "bin_lower": 0.5,
+        "bin_upper": 0.6,
+        "samples": 243,
+        "fraction_of_positives": 0.6502,
+        "mean_predicted_prob": 0.5478,
+        "calibration_gap": 0.1024
+      },
+      {
+        "bin_index": 6,
+        "bin_lower": 0.6,
+        "bin_upper": 0.7,
+        "samples": 217,
+        "fraction_of_positives": 0.6866,
+        "mean_predicted_prob": 0.6473,
+        "calibration_gap": 0.0393
+      },
+      {
+        "bin_index": 7,
+        "bin_lower": 0.7,
+        "bin_upper": 0.8,
+        "samples": 253,
+        "fraction_of_positives": 0.8103,
+        "mean_predicted_prob": 0.7509,
+        "calibration_gap": 0.0594
+      },
+      {
+        "bin_index": 8,
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "samples": 237,
+        "fraction_of_positives": 0.8397,
+        "mean_predicted_prob": 0.8523,
+        "calibration_gap": 0.0126
+      },
+      {
+        "bin_index": 9,
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "samples": 145,
+        "fraction_of_positives": 0.8483,
+        "mean_predicted_prob": 0.9418,
+        "calibration_gap": 0.0935
+      }
+    ]
+  },
+  "augmented": {
+    "model": "Logistic Regression (Augmented)",
+    "brier_score": 0.19382,
+    "expected_calibration_error": 0.042414,
+    "maximum_calibration_error": 0.115901,
+    "calibration_curve": [
+      {
+        "pred": 0.0674,
+        "true": 0.1833
+      },
+      {
+        "pred": 0.1541,
+        "true": 0.1592
+      },
+      {
+        "pred": 0.2541,
+        "true": 0.239
+      },
+      {
+        "pred": 0.3498,
+        "true": 0.3196
+      },
+      {
+        "pred": 0.4465,
+        "true": 0.3727
+      },
+      {
+        "pred": 0.5463,
+        "true": 0.5037
+      },
+      {
+        "pred": 0.6453,
+        "true": 0.6175
+      },
+      {
+        "pred": 0.7511,
+        "true": 0.7782
+      },
+      {
+        "pred": 0.85,
+        "true": 0.837
+      },
+      {
+        "pred": 0.9432,
+        "true": 0.83
+      }
+    ],
+    "bins": [
+      {
+        "bin_index": 0,
+        "bin_lower": 0.0,
+        "bin_upper": 0.1,
+        "samples": 60,
+        "fraction_of_positives": 0.1833,
+        "mean_predicted_prob": 0.0674,
+        "calibration_gap": 0.1159
+      },
+      {
+        "bin_index": 1,
+        "bin_lower": 0.1,
+        "bin_upper": 0.2,
+        "samples": 201,
+        "fraction_of_positives": 0.1592,
+        "mean_predicted_prob": 0.1541,
+        "calibration_gap": 0.0051
+      },
+      {
+        "bin_index": 2,
+        "bin_lower": 0.2,
+        "bin_upper": 0.3,
+        "samples": 251,
+        "fraction_of_positives": 0.239,
+        "mean_predicted_prob": 0.2541,
+        "calibration_gap": 0.0151
+      },
+      {
+        "bin_index": 3,
+        "bin_lower": 0.3,
+        "bin_upper": 0.4,
+        "samples": 363,
+        "fraction_of_positives": 0.3196,
+        "mean_predicted_prob": 0.3498,
+        "calibration_gap": 0.0302
+      },
+      {
+        "bin_index": 4,
+        "bin_lower": 0.4,
+        "bin_upper": 0.5,
+        "samples": 373,
+        "fraction_of_positives": 0.3727,
+        "mean_predicted_prob": 0.4465,
+        "calibration_gap": 0.0739
+      },
+      {
+        "bin_index": 5,
+        "bin_lower": 0.5,
+        "bin_upper": 0.6,
+        "samples": 270,
+        "fraction_of_positives": 0.5037,
+        "mean_predicted_prob": 0.5463,
+        "calibration_gap": 0.0426
+      },
+      {
+        "bin_index": 6,
+        "bin_lower": 0.6,
+        "bin_upper": 0.7,
+        "samples": 217,
+        "fraction_of_positives": 0.6175,
+        "mean_predicted_prob": 0.6453,
+        "calibration_gap": 0.0278
+      },
+      {
+        "bin_index": 7,
+        "bin_lower": 0.7,
+        "bin_upper": 0.8,
+        "samples": 248,
+        "fraction_of_positives": 0.7782,
+        "mean_predicted_prob": 0.7511,
+        "calibration_gap": 0.0272
+      },
+      {
+        "bin_index": 8,
+        "bin_lower": 0.8,
+        "bin_upper": 0.9,
+        "samples": 270,
+        "fraction_of_positives": 0.837,
+        "mean_predicted_prob": 0.85,
+        "calibration_gap": 0.013
+      },
+      {
+        "bin_index": 9,
+        "bin_lower": 0.9,
+        "bin_upper": 1.0,
+        "samples": 247,
+        "fraction_of_positives": 0.83,
+        "mean_predicted_prob": 0.9432,
+        "calibration_gap": 0.1133
+      }
+    ]
+  },
+  "comparison": {
+    "brier_score_delta": 0.002217,
+    "ece_delta": 0.002487,
+    "brier_improved": false,
+    "ece_improved": false,
+    "conclusion": "Augmentation maintained comparable calibration stability"
+  }
+}

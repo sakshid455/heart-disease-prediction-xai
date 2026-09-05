@@ -1,0 +1,4 @@
+dataset,file,rows,features,cVD_pos,cVD_pos_pct,missing_values
+Real Training Set,data/processed/large_train.csv,54889,11,27158,49.48,0
+Real Test Set (Held-out),data/processed/large_test.csv,13723,11,6790,49.48,0
+CTGAN Synthetic Set,data/processed/large_synthetic_ctgan.csv,109778,11,65231,59.42,0

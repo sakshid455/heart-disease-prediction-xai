@@ -1,0 +1,6 @@
+Dataset,Evaluation Setting,Model,Train N,Accuracy,Recall,F1-Score,ROC-AUC
+UCI Heart Disease (N=303),Baseline (0% Aug),Logistic Regression,242,86.89%,92.86%,86.67%,0.9513
+UCI Heart Disease (N=303),Optimal Augmentation,Random Forest (75% Aug),423,86.89%,85.71%,85.71%,0.9318
+"Large Cohort (N=68,612)",Baseline (0% Aug),Logistic Regression,54889,73.00%,66.58%,70.93%,0.7959
+"Large Cohort (N=68,612)",Optimal Augmentation,Logistic Regression (200% Aug),164667,72.10%,73.87%,72.38%,0.7894
+"Large Cohort (N=68,612)",Optimal Balanced,XGBoost (100% Aug),109778,73.11%,66.92%,71.12%,0.7975

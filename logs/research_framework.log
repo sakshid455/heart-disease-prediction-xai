@@ -1,0 +1,113 @@
+[2026-09-05 16:45:57] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 16:45:57] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 16:50:01] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 16:50:34] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 16:50:42] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 16:51:34] [INFO] [cardioai.synthetic.quality] Synthetic quality evaluation completed: Score 61.51%. Saved to results/synthetic\synthetic_quality_report.json
+[2026-09-05 16:51:56] [INFO] [cardioai.synthetic.privacy] Privacy analysis completed: Risk level LOW. Saved to results/privacy\privacy_analysis.json
+[2026-09-05 16:53:03] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: SVM @ 200.0% (RECALL = 0.7405)
+[2026-09-05 16:53:17] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: XGBoost @ 75.0% (F1 = 0.7241)
+[2026-09-05 16:53:51] [INFO] [cardioai.statistics.significance] Statistical significance analysis completed: 96 paired tests saved to results/statistics\statistical_significance.json
+[2026-09-05 16:55:19] [INFO] [cardioai.robustness.bootstrap] Bootstrap evaluation completed (100 iterations). Saved to results/robustness\bootstrap_results.json
+[2026-09-05 16:56:06] [INFO] [cardioai.calibration.engine] Calibration analysis completed: Brier 0.1938, ECE 0.0424. Saved to results/calibration\calibration_results.json
+[2026-09-05 16:56:06] [INFO] [cardioai.calibration.thresholds] Threshold optimization completed: Best F1 @ 0.45 (F1=0.7225). Saved to results/calibration\threshold_optimization.json
+[2026-09-05 16:57:40] [INFO] [cardioai.explainability.xai] XAI SHAP evaluation completed: Top feature ap_hi. Saved to results/explainability\xai_analysis.json
+[2026-09-05 16:58:24] [INFO] [cardioai.experiments.tracker] Registered experiment EXP-00001 (XGBoost @ 75.0%). Total logged: 1
+[2026-09-05 16:59:13] [INFO] [cardioai.reporting.generator] Research report synthesized and saved to results\research_report.md
+[2026-09-05 17:06:03] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 17:06:04] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 17:06:06] [INFO] [cardioai.synthetic.quality] Synthetic quality evaluation completed: Score 92.44%. Saved to results/synthetic\synthetic_quality_report.json
+[2026-09-05 17:06:07] [INFO] [cardioai.synthetic.privacy] Privacy analysis completed: Risk level MODERATE. Saved to results/privacy\privacy_analysis.json
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.engine] Starting Augmentation Experiment Suite: 1 models x 2 ratios = 2 experiments.
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.engine] [1/2] Running Logistic Regression with 0% augmentation...
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.engine] [2/2] Running Logistic Regression with 50% augmentation...
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.engine] Completed 2 experiments. Results saved to results/augmentation\augmentation_experiments.csv and results/augmentation\augmentation_experiments.json
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:06:07] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (F1 = 0.7219)
+[2026-09-05 17:06:09] [INFO] [cardioai.experiments.tracker] Registered experiment EXP-00002 (TestClassifier @ 50.0%). Total logged: 2
+[2026-09-05 17:06:09] [INFO] [cardioai.reporting.generator] Research report synthesized and saved to results\research_report.md
+[2026-09-05 17:06:09] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:06:47] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 17:06:48] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 17:06:51] [INFO] [cardioai.synthetic.quality] Synthetic quality evaluation completed: Score 92.44%. Saved to results/synthetic\synthetic_quality_report.json
+[2026-09-05 17:06:52] [INFO] [cardioai.synthetic.privacy] Privacy analysis completed: Risk level MODERATE. Saved to results/privacy\privacy_analysis.json
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.engine] Starting Augmentation Experiment Suite: 1 models x 2 ratios = 2 experiments.
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.engine] [1/2] Running Logistic Regression with 0% augmentation...
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.engine] [2/2] Running Logistic Regression with 50% augmentation...
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.engine] Completed 2 experiments. Results saved to results/augmentation\augmentation_experiments.csv and results/augmentation\augmentation_experiments.json
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:06:52] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (F1 = 0.7219)
+[2026-09-05 17:06:53] [INFO] [cardioai.experiments.tracker] Registered experiment EXP-00003 (TestClassifier @ 50.0%). Total logged: 3
+[2026-09-05 17:06:53] [INFO] [cardioai.reporting.generator] Research report synthesized and saved to results\research_report.md
+[2026-09-05 17:06:53] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:07:32] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 17:07:32] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 17:07:33] [INFO] [cardioai.synthetic.quality] Synthetic quality evaluation completed: Score 92.44%. Saved to results/synthetic\synthetic_quality_report.json
+[2026-09-05 17:07:33] [INFO] [cardioai.synthetic.privacy] Privacy analysis completed: Risk level MODERATE. Saved to results/privacy\privacy_analysis.json
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.engine] Starting Augmentation Experiment Suite: 1 models x 2 ratios = 2 experiments.
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.engine] [1/2] Running Logistic Regression with 0% augmentation...
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.engine] [2/2] Running Logistic Regression with 50% augmentation...
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.engine] Completed 2 experiments. Results saved to results/augmentation\augmentation_experiments.csv and results/augmentation\augmentation_experiments.json
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:07:33] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (F1 = 0.7219)
+[2026-09-05 17:07:34] [INFO] [cardioai.experiments.tracker] Registered experiment EXP-00004 (TestClassifier @ 50.0%). Total logged: 4
+[2026-09-05 17:07:34] [INFO] [cardioai.reporting.generator] Research report synthesized and saved to results\research_report.md
+[2026-09-05 17:07:34] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] ================================================================================
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] STARTING CARDIOAI SCIENTIFIC RESEARCH PIPELINE
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] Mode: QUICK (Fast Verification), Seed: 42, Objective: recall
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] ================================================================================
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] 
+--- [1/12] Phase 1: Data Quality Assessment ---
+[2026-09-05 17:07:45] [INFO] [cardioai.validation.quality] Data quality report successfully written to results/validation\data_quality_report.json and results/validation\data_quality_report.md
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] Phase 1 completed in 0.02s.
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] 
+--- [2/12] Phase 2: Pipeline Leakage Validation ---
+[2026-09-05 17:07:45] [INFO] [cardioai.validation.leakage] Leakage validation completed: Status FAIL. Reports saved to results/validation\leakage_report.json
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] Phase 2 completed in 0.35s. Status: FAIL
+[2026-09-05 17:07:45] [INFO] [cardioai.pipeline.master] 
+--- [3/12] Phase 3: Synthetic Quality Evaluation ---
+[2026-09-05 17:07:46] [INFO] [cardioai.synthetic.quality] Synthetic quality evaluation completed: Score 92.44%. Saved to results/synthetic\synthetic_quality_report.json
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] Phase 3 completed in 0.76s. Fidelity Score: 92.44%
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] 
+--- [4/12] Phase 4: Empirical Privacy Assessment ---
+[2026-09-05 17:07:46] [INFO] [cardioai.synthetic.privacy] Privacy analysis completed: Risk level MODERATE. Saved to results/privacy\privacy_analysis.json
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] Phase 4 completed in 0.30s. Risk Level: MODERATE
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] 
+--- [5/12] Phase 5: Augmentation Experiment Grid ---
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] Phase 5 completed in 0.00s. 2 experiments evaluated.
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] 
+--- [6/12] Phase 6: Best Configuration Selection ---
+[2026-09-05 17:07:46] [INFO] [cardioai.augmentation.best_config] Best Configuration selected: Logistic Regression @ 50.0% (RECALL = 0.7133)
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] Phase 6 completed in 0.00s. Best: Logistic Regression @ 50.0%
+[2026-09-05 17:07:46] [INFO] [cardioai.pipeline.master] 
+--- [7/12] Phase 7: Statistical Significance Testing ---
+[2026-09-05 17:07:47] [INFO] [cardioai.statistics.significance] Statistical significance analysis completed: 96 paired tests saved to results/statistics\statistical_significance.json
+[2026-09-05 17:07:47] [INFO] [cardioai.pipeline.master] Phase 7 completed in 0.17s. 96 paired tests evaluated.
+[2026-09-05 17:07:47] [INFO] [cardioai.pipeline.master] 
+--- [8/12] Phase 8: Bootstrap Robustness Analysis ---
+[2026-09-05 17:07:51] [INFO] [cardioai.robustness.bootstrap] Bootstrap evaluation completed (100 iterations). Saved to results/robustness\bootstrap_results.json
+[2026-09-05 17:07:51] [INFO] [cardioai.pipeline.master] Phase 8 completed in 4.46s. Bootstrap iterations: 100
+[2026-09-05 17:07:51] [INFO] [cardioai.pipeline.master] 
+--- [9/12] Phase 9: Model Calibration Analysis ---
+[2026-09-05 17:07:51] [INFO] [cardioai.calibration.engine] Calibration analysis completed: Brier 0.1938, ECE 0.0424. Saved to results/calibration\calibration_results.json
+[2026-09-05 17:07:51] [INFO] [cardioai.pipeline.master] Phase 9 completed in 0.20s. ECE: 0.0424
+[2026-09-05 17:07:51] [INFO] [cardioai.pipeline.master] 
+--- [10/12] Phase 10: Decision Threshold Optimization ---
+[2026-09-05 17:07:52] [INFO] [cardioai.calibration.thresholds] Threshold optimization completed: Best F1 @ 0.45 (F1=0.7225). Saved to results/calibration\threshold_optimization.json
+[2026-09-05 17:07:52] [INFO] [cardioai.pipeline.master] Phase 10 completed in 0.18s. Best F1 Threshold: 0.45
+[2026-09-05 17:07:52] [INFO] [cardioai.pipeline.master] 
+--- [11/12] Phase 11 & 12: Explainability & Counterfactuals ---
+[2026-09-05 17:07:53] [INFO] [cardioai.explainability.xai] XAI SHAP evaluation completed: Top feature ap_hi. Saved to results/explainability\xai_analysis.json
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] Phase 11 & 12 completed in 1.43s. CF drop: 0.5358
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] 
+--- [12/12] Phase 13 & 16: Experiment Tracking & Report Generation ---
+[2026-09-05 17:07:53] [INFO] [cardioai.experiments.tracker] Registered experiment EXP-00005 (Logistic Regression @ 50.0%). Total logged: 5
+[2026-09-05 17:07:53] [INFO] [cardioai.reporting.generator] Research report synthesized and saved to results\research_report.md
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] Report generated in 0.01s. Path: results\research_report.md
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] 
+================================================================================
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] RESEARCH PIPELINE COMPLETED SUCCESSFULLY IN 7.88s
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] Final Report: results\research_report.md
+[2026-09-05 17:07:53] [INFO] [cardioai.pipeline.master] ================================================================================
+[2026-09-05 17:40:46] [INFO] [cardioai.reporting.paper_outline] Paper outline manuscript successfully generated: results/paper_outline.md

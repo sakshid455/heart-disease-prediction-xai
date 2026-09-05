@@ -1,0 +1,60 @@
+{
+  "model": "CTGAN",
+  "library": "ctgan",
+  "library_version": "0.12.1",
+  "training_data": "data/processed/large_train.csv",
+  "output_data": "data/processed/large_synthetic_ctgan.csv",
+  "hyperparameters": {
+    "epochs": 150,
+    "batch_size": 500,
+    "pac": 10,
+    "generator_dim": [
+      256,
+      256
+    ],
+    "discriminator_dim": [
+      256,
+      256
+    ],
+    "generator_lr": 0.0002,
+    "discriminator_lr": 0.0002
+  },
+  "random_seed": 42,
+  "training_sample_count": 54889,
+  "synthetic_sample_count": 109778,
+  "synthetic_ratio": 2.0,
+  "max_augmentation_ratio_supported": "200%",
+  "training_time_seconds": 1351.0,
+  "discrete_columns": [
+    "gender",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active",
+    "cardio"
+  ],
+  "numerical_features": [
+    "age",
+    "height",
+    "weight",
+    "ap_hi",
+    "ap_lo"
+  ],
+  "categorical_features": [
+    "gender",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active"
+  ],
+  "target_column": "cardio",
+  "test_set_used": false,
+  "notes": [
+    "CTGAN trained ONLY on large_train.csv (training split).",
+    "large_test.csv was NEVER loaded or used.",
+    "Synthetic ratio of 2.0 supports augmentation up to 200%.",
+    "Hyperparameters adapted from src/tune_ctgan.py for large dataset."
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "dataset_comparison": {
+    "real_records": 54889,
+    "synthetic_records": 109778,
+    "attributes_evaluated": 12
+  },
+  "overall_quality_score": 0.9244,
+  "correlation_analysis": {
+    "overall_correlation_similarity": 0.9215,
+    "frobenius_distance": 0.7967,
+    "normalized_frobenius": 0.0664
+  },
+  "record_similarity_privacy": {
+    "dcr_mean": 1.1188,
+    "dcr_median": 1.0169,
+    "dcr_5th_percentile": 0.2691,
+    "dcr_min": 0.0445,
+    "nndr_mean": 0.8103,
+    "nndr_median": 0.8601,
+    "exact_duplicate_count": 452,
+    "exact_duplicate_rate_pct": 0.4117
+  },
+  "numerical_distributions": {
+    "age": {
+      "ks_statistic": 0.0674,
+      "ks_pvalue": 0.0,
+      "wasserstein_distance": 0.7034,
+      "distribution_similarity": 0.9326
+    },
+    "height": {
+      "ks_statistic": 0.0475,
+      "ks_pvalue": 0.0,
+      "wasserstein_distance": 0.7703,
+      "distribution_similarity": 0.9525
+    },
+    "weight": {
+      "ks_statistic": 0.144,
+      "ks_pvalue": 0.0,
+      "wasserstein_distance": 3.2437,
+      "distribution_similarity": 0.856
+    },
+    "ap_hi": {
+      "ks_statistic": 0.0799,
+      "ks_pvalue": 0.0,
+      "wasserstein_distance": 2.2051,
+      "distribution_similarity": 0.9201
+    },
+    "ap_lo": {
+      "ks_statistic": 0.0434,
+      "ks_pvalue": 0.0,
+      "wasserstein_distance": 0.9466,
+      "distribution_similarity": 0.9566
+    }
+  },
+  "categorical_distributions": {
+    "alco": {
+      "tvd": 0.0678,
+      "js_distance": 0.086,
+      "categorical_similarity": 0.9322
+    },
+    "gluc": {
+      "tvd": 0.0503,
+      "js_distance": 0.0474,
+      "categorical_similarity": 0.9497
+    },
+    "gender": {
+      "tvd": 0.0665,
+      "js_distance": 0.0483,
+      "categorical_similarity": 0.9335
+    },
+    "active": {
+      "tvd": 0.067,
+      "js_distance": 0.0642,
+      "categorical_similarity": 0.933
+    },
+    "cholesterol": {
+      "tvd": 0.0737,
+      "js_distance": 0.0606,
+      "categorical_similarity": 0.9263
+    },
+    "cardio": {
+      "tvd": 0.0994,
+      "js_distance": 0.0706,
+      "categorical_similarity": 0.9006
+    },
+    "smoke": {
+      "tvd": 0.0748,
+      "js_distance": 0.0805,
+      "categorical_similarity": 0.9252
+    }
+  },
+  "central_tendencies": {
+    "age": {
+      "real_mean": 53.3,
+      "synth_mean": 52.6,
+      "mean_rel_error": 0.0131,
+      "real_std": 6.75,
+      "synth_std": 6.94,
+      "std_rel_error": 0.0274,
+      "real_median": 53.9,
+      "synth_median": 52.5
+    },
+    "height": {
+      "real_mean": 164.41,
+      "synth_mean": 164.87,
+      "mean_rel_error": 0.0028,
+      "real_std": 7.97,
+      "synth_std": 8.02,
+      "std_rel_error": 0.0055,
+      "real_median": 165.0,
+      "synth_median": 164.0
+    },
+    "weight": {
+      "real_mean": 74.13,
+      "synth_mean": 76.05,
+      "mean_rel_error": 0.0258,
+      "real_std": 14.3,
+      "synth_std": 12.43,
+      "std_rel_error": 0.1311,
+      "real_median": 72.0,
+      "synth_median": 77.0
+    },
+    "ap_hi": {
+      "real_mean": 126.68,
+      "synth_mean": 127.95,
+      "mean_rel_error": 0.01,
+      "real_std": 16.7,
+      "synth_std": 16.87,
+      "std_rel_error": 0.0105,
+      "real_median": 120.0,
+      "synth_median": 120.0
+    },
+    "ap_lo": {
+      "real_mean": 81.29,
+      "synth_mean": 81.79,
+      "mean_rel_error": 0.0061,
+      "real_std": 9.41,
+      "synth_std": 9.35,
+      "std_rel_error": 0.0073,
+      "real_median": 80.0,
+      "synth_median": 80.0
+    }
+  }
+}

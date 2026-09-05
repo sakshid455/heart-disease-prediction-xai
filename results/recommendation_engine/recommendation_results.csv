@@ -1,0 +1,6 @@
+Objective,Recommended Ratio,Recommended Model,Accuracy,Precision,Recall,F1-Score,ROC-AUC,Total Training Samples,Synthetic Samples
+Balanced Performance,50%,XGBoost,73.56%,74.87%,70.07%,72.39%,0.8022,"82,333","27,444"
+High Sensitivity / Recall,200%,Logistic Regression,72.10%,70.94%,73.87%,72.38%,0.7894,"164,667","109,778"
+High Precision,0%,XGBoost,73.80%,76.21%,68.39%,72.09%,0.8053,"54,889",0
+Maximum F1,75%,XGBoost,73.30%,74.08%,70.82%,72.41%,0.8001,"96,055","41,166"
+Maximum ROC-AUC,0%,XGBoost,73.80%,76.21%,68.39%,72.09%,0.8053,"54,889",0

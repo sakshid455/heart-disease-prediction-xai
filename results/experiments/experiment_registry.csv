@@ -1,0 +1,6 @@
+experiment_id,timestamp,dataset_name,model,augmentation_ratio,random_seed,training_time_seconds,accuracy,precision,recall,f1,roc_auc,notes
+EXP-00001,2026-09-05T11:28:24.743674Z,Cardiovascular Disease Tabular,XGBoost,75.0,42,0.0,0.733,0.741,0.708,0.724,0.8,
+EXP-00002,2026-09-05T11:36:09.663344Z,Cardiovascular Disease Tabular,TestClassifier,50.0,42,0.0,,,0.85,0.8,,Automated unit test record
+EXP-00003,2026-09-05T11:36:53.242669Z,Cardiovascular Disease Tabular,TestClassifier,50.0,42,0.0,,,0.85,0.8,,Automated unit test record
+EXP-00004,2026-09-05T11:37:34.429400Z,Cardiovascular Disease Tabular,TestClassifier,50.0,42,0.0,,,0.85,0.8,,Automated unit test record
+EXP-00005,2026-09-05T11:37:53.439991Z,Cardiovascular Disease Tabular,Logistic Regression,50.0,42,0.0,0.725,0.730809,0.713287,0.721941,0.791537,Master pipeline automated run

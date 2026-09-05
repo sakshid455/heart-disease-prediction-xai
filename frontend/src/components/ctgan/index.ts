@@ -1,0 +1,8 @@
+export { CtganHero } from './CtganHero'
+export { WhatIsCtganSection } from './WhatIsCtganSection'
+export { WhySyntheticDataSection } from './WhySyntheticDataSection'
+export { GenerationPipelineSection } from './GenerationPipelineSection'
+export { RealVsSyntheticTable } from './RealVsSyntheticTable'
+export { DistributionComparisonSection } from './DistributionComparisonSection'
+export { SyntheticQualitySection } from './SyntheticQualitySection'
+export { AdaptiveAugmentationSection } from './AdaptiveAugmentationSection'

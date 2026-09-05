@@ -1,0 +1,120 @@
+{
+  "model": "Logistic Regression",
+  "iterations": 100,
+  "baseline": {
+    "accuracy": {
+      "mean": 0.72221,
+      "std": 0.006447,
+      "median": 0.7218,
+      "ci_lower": 0.70934,
+      "ci_upper": 0.734945,
+      "ci_width": 0.025605
+    },
+    "precision": {
+      "mean": 0.748381,
+      "std": 0.00868,
+      "median": 0.747375,
+      "ci_lower": 0.733229,
+      "ci_upper": 0.768351,
+      "ci_width": 0.035122
+    },
+    "recall": {
+      "mean": 0.660342,
+      "std": 0.009489,
+      "median": 0.660381,
+      "ci_lower": 0.639649,
+      "ci_upper": 0.678163,
+      "ci_width": 0.038513
+    },
+    "f1": {
+      "mean": 0.701571,
+      "std": 0.007613,
+      "median": 0.701214,
+      "ci_lower": 0.686843,
+      "ci_upper": 0.717241,
+      "ci_width": 0.030398
+    },
+    "roc_auc": {
+      "mean": 0.781147,
+      "std": 0.006053,
+      "median": 0.781373,
+      "ci_lower": 0.769138,
+      "ci_upper": 0.791731,
+      "ci_width": 0.022593
+    }
+  },
+  "augmented": {
+    "accuracy": {
+      "mean": 0.716128,
+      "std": 0.006389,
+      "median": 0.7165,
+      "ci_lower": 0.703885,
+      "ci_upper": 0.726925,
+      "ci_width": 0.02304
+    },
+    "precision": {
+      "mean": 0.713611,
+      "std": 0.009081,
+      "median": 0.713672,
+      "ci_lower": 0.695577,
+      "ci_upper": 0.733049,
+      "ci_width": 0.037472
+    },
+    "recall": {
+      "mean": 0.711632,
+      "std": 0.008338,
+      "median": 0.711061,
+      "ci_lower": 0.694219,
+      "ci_upper": 0.726136,
+      "ci_width": 0.031917
+    },
+    "f1": {
+      "mean": 0.712584,
+      "std": 0.007091,
+      "median": 0.712084,
+      "ci_lower": 0.698876,
+      "ci_upper": 0.724478,
+      "ci_width": 0.025602
+    },
+    "roc_auc": {
+      "mean": 0.777165,
+      "std": 0.006231,
+      "median": 0.777235,
+      "ci_lower": 0.765943,
+      "ci_upper": 0.788816,
+      "ci_width": 0.022873
+    }
+  },
+  "delta_analysis": {
+    "accuracy": {
+      "mean_delta": -0.006082,
+      "ci_lower": -0.012505,
+      "ci_upper": 0.000735,
+      "prob_positive_gain": 0.03
+    },
+    "precision": {
+      "mean_delta": -0.03477,
+      "ci_lower": -0.04247,
+      "ci_upper": -0.025907,
+      "prob_positive_gain": 0.0
+    },
+    "recall": {
+      "mean_delta": 0.05129,
+      "ci_lower": 0.041962,
+      "ci_upper": 0.060107,
+      "prob_positive_gain": 1.0
+    },
+    "f1": {
+      "mean_delta": 0.011013,
+      "ci_lower": 0.003625,
+      "ci_upper": 0.018417,
+      "prob_positive_gain": 1.0
+    },
+    "roc_auc": {
+      "mean_delta": -0.003982,
+      "ci_lower": -0.006638,
+      "ci_upper": -0.001236,
+      "prob_positive_gain": 0.01
+    }
+  }
+}

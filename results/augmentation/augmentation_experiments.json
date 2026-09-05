@@ -1,0 +1,34 @@
+[
+  {
+    "experiment_id": "EXP-906CAFBE",
+    "timestamp": "2026-09-05T11:37:33.917116Z",
+    "model": "Logistic Regression",
+    "augmentation_ratio": 0.0,
+    "real_samples": 54889,
+    "synthetic_samples": 0,
+    "total_samples": 5000,
+    "accuracy": 0.7355,
+    "precision": 0.768793,
+    "recall": 0.674326,
+    "f1": 0.718467,
+    "roc_auc": 0.78987,
+    "random_seed": 42,
+    "training_time_seconds": 0.029
+  },
+  {
+    "experiment_id": "EXP-BC9AF7A5",
+    "timestamp": "2026-09-05T11:37:33.957130Z",
+    "model": "Logistic Regression",
+    "augmentation_ratio": 50.0,
+    "real_samples": 54889,
+    "synthetic_samples": 27444,
+    "total_samples": 5000,
+    "accuracy": 0.725,
+    "precision": 0.730809,
+    "recall": 0.713287,
+    "f1": 0.721941,
+    "roc_auc": 0.791537,
+    "random_seed": 42,
+    "training_time_seconds": 0.04
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "total_records": 68612,
+  "columns": [
+    "age",
+    "gender",
+    "height",
+    "weight",
+    "ap_hi",
+    "ap_lo",
+    "cholesterol",
+    "gluc",
+    "smoke",
+    "alco",
+    "active",
+    "cardio"
+  ],
+  "target_distribution": {
+    "negative_0": 34664,
+    "positive_1": 33948,
+    "negative_pct": 50.52,
+    "positive_pct": 49.48
+  },
+  "missing_values": 0
+}

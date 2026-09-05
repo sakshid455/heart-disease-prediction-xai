@@ -1,0 +1,8 @@
+export { HeartHealthHero } from './HeartHealthHero'
+export { WhatIsHeartDisease } from './WhatIsHeartDisease'
+export { TypesSection } from './TypesSection'
+export { RiskFactorsSection } from './RiskFactorsSection'
+export { WarningSignsSection } from './WarningSignsSection'
+export { PreventionSection } from './PreventionSection'
+export { KnowYourNumbersSection } from './KnowYourNumbersSection'
+export { HeartHealthCTA } from './HeartHealthCTA'

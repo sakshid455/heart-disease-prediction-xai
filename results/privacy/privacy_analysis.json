@@ -1,0 +1,31 @@
+{
+  "title": "Empirical Privacy Risk Assessment for CTGAN Synthetic Data",
+  "risk_level": "MODERATE",
+  "formal_dp_guarantee": false,
+  "disclaimer": "The current implementation does not provide a formal (\u03b5, \u03b4)-Differential Privacy guarantee. All metrics represent empirical distance and duplicate analyses. DP-CTGAN is planned as future work.",
+  "sample_counts": {
+    "training_records": 54889,
+    "synthetic_records": 109778,
+    "test_records": 13723
+  },
+  "exact_duplicates": {
+    "synthetic_to_train_count": 452,
+    "synthetic_to_train_pct": 0.4117,
+    "synthetic_to_test_count": 92,
+    "synthetic_to_test_pct": 0.0838
+  },
+  "distance_to_closest_record": {
+    "dcr_mean": 1.0731,
+    "dcr_median": 0.948,
+    "dcr_5th_percentile": 0.2521,
+    "dcr_min": 0.0444,
+    "test_to_train_baseline_dcr_median": 0.7714,
+    "memorization_ratio": 1.2288
+  },
+  "nearest_neighbor_distance_ratio": {
+    "nndr_mean": 0.807,
+    "nndr_median": 0.8558,
+    "nndr_5th_percentile": 0.4478
+  },
+  "interpretation": "Moderate empirical privacy risk. Minor localized density clustering observed."
+}

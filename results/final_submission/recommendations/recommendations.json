@@ -1,0 +1,77 @@
+[
+  {
+    "objective": "Balanced Performance",
+    "recommended_augmentation_ratio": "0%",
+    "recommended_model": "XGBoost",
+    "expected_metrics": {
+      "accuracy": 0.738,
+      "precision": 0.7621,
+      "recall": 0.6839,
+      "f1_score": 0.7209,
+      "roc_auc": 0.8053,
+      "training_samples": 54889,
+      "synthetic_samples": 0
+    },
+    "rationale": "Selected XGBoost at 0% augmentation because it achieves the highest harmonic multi-objective utility score (0.7477), establishing an optimal equilibrium between Precision (76.21%) and Recall (68.39%) with strong ROC-AUC (0.8053)."
+  },
+  {
+    "objective": "High Sensitivity / Recall",
+    "recommended_augmentation_ratio": "0%",
+    "recommended_model": "SVM",
+    "expected_metrics": {
+      "accuracy": 0.7288,
+      "precision": 0.7428,
+      "recall": 0.6912,
+      "f1_score": 0.7161,
+      "roc_auc": 0.7907,
+      "training_samples": 54889,
+      "synthetic_samples": 0
+    },
+    "rationale": "Selected SVM at 0% augmentation because it maximizes clinical disease detection sensitivity (69.12% Recall), reducing false negatives to the lowest empirical rate (26.13%) across all evaluated valid configurations while maintaining a 71.61% F1-score and 0.7907 ROC-AUC."
+  },
+  {
+    "objective": "High Precision",
+    "recommended_augmentation_ratio": "200%",
+    "recommended_model": "Random Forest",
+    "expected_metrics": {
+      "accuracy": 0.7213,
+      "precision": 0.7836,
+      "recall": 0.6035,
+      "f1_score": 0.6819,
+      "roc_auc": 0.7895,
+      "training_samples": 164667,
+      "synthetic_samples": 109778
+    },
+    "rationale": "Selected Random Forest at 200% augmentation because it achieves the highest positive predictive value (78.36% Precision), minimizing false positive alarm rates for confirmatory clinical pipelines where downstream testing costs are significant."
+  },
+  {
+    "objective": "Maximum F1",
+    "recommended_augmentation_ratio": "0%",
+    "recommended_model": "XGBoost",
+    "expected_metrics": {
+      "accuracy": 0.738,
+      "precision": 0.7621,
+      "recall": 0.6839,
+      "f1_score": 0.7209,
+      "roc_auc": 0.8053,
+      "training_samples": 54889,
+      "synthetic_samples": 0
+    },
+    "rationale": "Selected XGBoost at 0% augmentation because it delivers the peak harmonic mean of precision and recall (72.09% F1-Score), providing the highest aggregate classification effectiveness."
+  },
+  {
+    "objective": "Maximum ROC-AUC",
+    "recommended_augmentation_ratio": "0%",
+    "recommended_model": "XGBoost",
+    "expected_metrics": {
+      "accuracy": 0.738,
+      "precision": 0.7621,
+      "recall": 0.6839,
+      "f1_score": 0.7209,
+      "roc_auc": 0.8053,
+      "training_samples": 54889,
+      "synthetic_samples": 0
+    },
+    "rationale": "Selected XGBoost at 0% augmentation because it maximizes global rank-order separability (0.8053 ROC-AUC) and overall accuracy (73.80%), preserving exact empirical distributions without generative boundary smoothing."
+  }
+]

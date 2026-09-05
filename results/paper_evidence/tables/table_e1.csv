@@ -1,0 +1,13 @@
+Feature ID,Clinical Attribute,Variable Type,Unit,Valid Range,Mean / Baseline,Missing (%)
+age,Patient Age,Continuous,Years,18 – 100,53.34 ± 6.78,0.00%
+gender,Biological Sex,Binary,"Code (1=F, 2=M)","1, 2","Female: 65.0%, Male: 35.0%",0.00%
+height,Body Height,Continuous,cm,120 – 220,164.36 ± 8.21,0.00%
+weight,Body Weight,Continuous,kg,30 – 200,74.21 ± 14.40,0.00%
+ap_hi,Systolic Blood Pressure,Continuous,mmHg,60 – 240,128.82 ± 15.42,0.00%
+ap_lo,Diastolic Blood Pressure,Continuous,mmHg,40 – 160,81.38 ± 9.87,0.00%
+cholesterol,Serum Cholesterol,Ordinal,Category (1-3),"1, 2, 3","Normal: 74.8%, High: 25.2%",0.00%
+gluc,Fasting Blood Glucose,Ordinal,Category (1-3),"1, 2, 3","Normal: 85.0%, High: 15.0%",0.00%
+smoke,Tobacco Smoking,Binary,Binary (0/1),"0, 1",8.81% Active,0.00%
+alco,Alcohol Consumption,Binary,Binary (0/1),"0, 1",5.34% Active,0.00%
+active,Physical Activity,Binary,Binary (0/1),"0, 1",80.34% Active,0.00%
+cardio,CVD Diagnosis (Target),Binary Target,Binary (0/1),"0, 1","Neg: 50.52%, Pos: 49.48%",0.00%

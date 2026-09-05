@@ -1,0 +1,22 @@
+{
+  "normalized_wasserstein_distance": {
+    "age": 0.11382936471788516,
+    "height": 0.14399556791475024,
+    "weight": 0.19075028426353507,
+    "ap_hi": 0.21249157390369655,
+    "ap_lo": 0.17362950682286074
+  },
+  "mean_wasserstein": 0.16693925952454555,
+  "mean_correlation_divergence": 0.0791518277130723,
+  "max_correlation_divergence": 0.6088456586536019,
+  "categorical_js_divergences": {
+    "gender": 0.007447757111095056,
+    "cholesterol": 0.005558712071458728,
+    "gluc": 0.010940887096474122,
+    "smoke": 0.004441918736312287,
+    "alco": 0.007627795773343039,
+    "active": 0.021256627362448127,
+    "cardio": 3.0027317200546607e-06
+  },
+  "mean_js_divergence": 0.008182385840407345
+}

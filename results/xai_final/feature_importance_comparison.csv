@@ -1,0 +1,12 @@
+feature,mean_abs_shap_real,mean_abs_shap_aug,model_weight_real,model_weight_aug,direction_real,direction_aug,direction_consistent,rank_real,rank_aug
+ap_hi,0.765108,0.664834,0.941864,0.823236,Positive (Risk +),Positive (Risk +),True,1,1
+cholesterol,0.2782,0.293328,0.335084,0.385141,Positive (Risk +),Positive (Risk +),True,3,2
+age,0.286658,0.274227,0.339769,0.327204,Positive (Risk +),Positive (Risk +),True,2,3
+ap_lo,0.065419,0.24094,0.095304,0.337795,Positive (Risk +),Positive (Risk +),True,6,4
+weight,0.12747,0.177835,0.168589,0.2071,Positive (Risk +),Positive (Risk +),True,4,5
+active,0.072654,0.114513,-0.091974,-0.136215,Negative (Risk -),Negative (Risk -),True,5,6
+gender,0.008622,0.057997,-0.009343,0.0588,Negative (Risk -),Positive (Risk +),False,11,7
+height,0.025405,0.050351,-0.032607,0.065352,Negative (Risk -),Positive (Risk +),False,8,8
+smoke,0.024133,0.028763,-0.042302,-0.048888,Negative (Risk -),Negative (Risk -),True,9,9
+gluc,0.063391,0.027051,-0.080049,0.042115,Negative (Risk -),Positive (Risk +),False,7,10
+alco,0.019338,0.016634,-0.047912,0.042242,Negative (Risk -),Positive (Risk +),False,10,11

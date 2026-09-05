@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  body {
+    background-color: #F7F4ED;
+    color: #17352D;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Editorial Serif Headings */
+  h1, h2, h3 {
+    color: #17352D;
+    letter-spacing: -0.02em;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  h4, h5, h6 {
+    color: #17352D;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-ivory {
+    background-color: #F7F4ED;
+  }
+  .bg-ivory-subtle {
+    background-color: #FAF8F4;
+  }
+  .bg-sage {
+    background-color: #E8EEE8;
+  }
+  .bg-forest {
+    background-color: #17352D;
+  }
+  .text-forest {
+    color: #17352D;
+  }
+  .text-charcoal {
+    color: #28302D;
+  }
+  .text-emerald {
+    color: #3D8068;
+  }
+  .text-coral {
+    color: #C87868;
+  }
+  .text-sand {
+    color: #D9C7A5;
+  }
+}
+
+@layer components {
+  /* Layout Containers */
+  .section-container {
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 640px) {
+    .section-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* Editorial Card Surfaces */
+  .editorial-card {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(217, 199, 165, 0.4);
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px -3px rgba(23, 53, 45, 0.05);
+    transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .editorial-card:hover {
+    border-color: rgba(61, 128, 104, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -6px rgba(23, 53, 45, 0.09);
+  }
+
+  /* Deep Forest Primary Button */
+  .btn-forest {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #17352D;
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.75rem;
+    transition: all 200ms ease;
+    box-shadow: 0 2px 6px rgba(23, 53, 45, 0.15);
+  }
+  .btn-forest:hover {
+    background-color: #102721;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(23, 53, 45, 0.2);
+  }
+
+  /* Secondary Outline Button */
+  .btn-outline-forest {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #17352D;
+    border: 1.5px solid #17352D;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 0.75rem;
+    transition: all 200ms ease;
+  }
+  .btn-outline-forest:hover {
+    background-color: #17352D;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+  }
+}
+
+/* Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9C7A5;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3D8068;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,8 @@
+export { AboutHero } from './AboutHero'
+export { ChallengeSection } from './ChallengeSection'
+export { ApproachSection } from './ApproachSection'
+export { CTGANSection } from './CTGANSection'
+export { ExplainableAIAboutSection } from './ExplainableAIAboutSection'
+export { ObjectivesSection } from './ObjectivesSection'
+export { ContributionSection } from './ContributionSection'
+export { DisclaimerSection } from './DisclaimerSection'

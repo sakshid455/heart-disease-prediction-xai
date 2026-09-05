@@ -1,0 +1,2 @@
+best_model,optimal_augmentation_ratio,real_train_size,synthetic_train_size,total_train_size,accuracy,precision,recall,f1_score,roc_auc,weighted_score,priorities
+Logistic Regression,200,54889,109778,164667,0.720979,0.709376,0.738733,0.723757,0.789407,0.749443,"1. Recall (0.40), 2. ROC-AUC (0.30), 3. F1-Score (0.30)"

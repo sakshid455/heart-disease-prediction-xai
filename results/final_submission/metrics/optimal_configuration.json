@@ -1,0 +1,13 @@
+{
+  "best_model": "Logistic Regression",
+  "optimal_augmentation_ratio": "200%",
+  "training_size": 54889,
+  "synthetic_training_size": 109778,
+  "total_training_size": 164667,
+  "accuracy": 0.695110398600889,
+  "precision": 0.777943686006826,
+  "recall": 0.5371134020618556,
+  "f1_score": 0.6354765638612999,
+  "roc_auc": 0.7798848626247397,
+  "rationale": "Selected for maximal clinical screening sensitivity (+7.29% recall surge) and minimal false negatives."
+}

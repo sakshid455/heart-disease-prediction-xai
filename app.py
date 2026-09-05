@@ -1,3 +1,4 @@
+import joblib
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -81,7 +82,20 @@ st.info(
     "as a substitute for professional medical diagnosis."
 )
 
+# ============================================================
+# NAVIGATION
+# ============================================================
 
+page = st.sidebar.radio(
+    "Navigation",
+    [
+        "🏠 Home",
+        "🩺 Prediction",
+        "📊 Model Performance",
+        "🧬 Synthetic Data Analysis",
+        "ℹ️ About"
+    ]
+)
 # ============================================================
 # LOAD DATA
 # ============================================================
@@ -98,35 +112,46 @@ def load_data():
 
 # ============================================================
 # TRAIN MODEL
+# # ============================================================
+
+# @st.cache_resource
+# def train_model():
+
+#     data = load_data()
+
+#     X = data.drop(
+#         columns=["num"]
+#     )
+
+#     y = data["num"]
+
+#     model = RandomForestClassifier(
+#         n_estimators=100,
+#         random_state=42
+#     )
+
+#     model.fit(
+#         X,
+#         y
+#     )
+
+#     return model
+
+
+# model = train_model()
+
+# ============================================================
+# LOAD SAVED MODEL
 # ============================================================
 
 @st.cache_resource
-def train_model():
-
-    data = load_data()
-
-    X = data.drop(
-        columns=["num"]
+def load_model():
+    return joblib.load(
+        "models/heart_disease_rf.pkl"
     )
 
-    y = data["num"]
 
-    model = RandomForestClassifier(
-        n_estimators=100,
-        random_state=42
-    )
-
-    model.fit(
-        X,
-        y
-    )
-
-    return model
-
-
-model = train_model()
-
-
+model = load_model()
 # ============================================================
 # SHAP EXPLAINER
 # ============================================================
@@ -536,3 +561,244 @@ st.caption(
     "This tool is for educational and research purposes only "
     "and is not a medical diagnostic system."
 )
+
+
+# ============================================================
+# MODEL PERFORMANCE PAGE
+# ============================================================
+
+if page == "📊 Model Performance":
+
+    st.header("📊 Model Performance Comparison")
+
+    st.write(
+        "Comparison of models trained using real, "
+        "CTGAN-generated synthetic, and combined data."
+    )
+
+    results = pd.read_csv(
+        "results/final_model_comparison.csv"
+    )
+
+    st.subheader("Final Experimental Results")
+
+    st.dataframe(
+        results,
+        use_container_width=True
+    )
+
+    st.subheader("Performance Comparison")
+
+    st.bar_chart(
+        results.set_index("Model")[
+            [
+                "Accuracy",
+                "Precision",
+                "Recall",
+                "F1-Score",
+                "ROC-AUC"
+            ]
+        ]
+    )
+
+    st.subheader("Key Findings")
+
+    best_model = results.loc[
+        results["Accuracy"].idxmax()
+    ]
+
+    st.success(
+        f"Best Accuracy: {best_model['Model']} "
+        f"({best_model['Accuracy'] * 100:.2f}%)"
+    )
+
+    st.info(
+        "The CTGAN-generated synthetic dataset retained "
+        "substantial predictive utility. However, in this "
+        "experiment, combining synthetic and real data did "
+        "not outperform training with real data alone."
+    )
+    
+    
+# ============================================================
+# SYNTHETIC DATA ANALYSIS PAGE
+# ============================================================
+
+if page == "🧬 Synthetic Data Analysis":
+
+    st.header("🧬 Synthetic Data Analysis")
+
+    st.write(
+        "This section compares the original real training "
+        "data with the CTGAN-generated synthetic data."
+    )
+
+    # --------------------------------------------------------
+    # LOAD DATA
+    # --------------------------------------------------------
+
+    real_data = pd.read_csv(
+        "data/processed/real_train.csv"
+    )
+
+    synthetic_data = pd.read_csv(
+        "data/processed/synthetic_tuned.csv"
+    )
+
+    # --------------------------------------------------------
+    # DATASET OVERVIEW
+    # --------------------------------------------------------
+
+    st.subheader("Dataset Overview")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric(
+            "Real Training Records",
+            len(real_data)
+        )
+
+    with col2:
+        st.metric(
+            "Synthetic Records",
+            len(synthetic_data)
+        )
+
+    # --------------------------------------------------------
+    # TARGET DISTRIBUTION
+    # --------------------------------------------------------
+
+    st.subheader("Target Distribution")
+
+    real_distribution = (
+        real_data["num"]
+        .value_counts(normalize=True)
+        .sort_index()
+    )
+
+    synthetic_distribution = (
+        synthetic_data["num"]
+        .value_counts(normalize=True)
+        .sort_index()
+    )
+
+    distribution_comparison = pd.DataFrame({
+        "Real Data": real_distribution,
+        "Synthetic Data": synthetic_distribution
+    })
+
+    st.dataframe(
+        distribution_comparison,
+        use_container_width=True
+    )
+
+    st.bar_chart(
+        distribution_comparison
+    )
+
+    # --------------------------------------------------------
+    # STATISTICAL COMPARISON
+    # --------------------------------------------------------
+
+    st.subheader("Statistical Comparison")
+
+    numeric_features = [
+        "age",
+        "trestbps",
+        "chol",
+        "thalach",
+        "oldpeak"
+    ]
+
+    comparison = pd.DataFrame({
+        "Real Mean": real_data[numeric_features].mean(),
+        "Synthetic Mean": synthetic_data[numeric_features].mean(),
+        "Real Std": real_data[numeric_features].std(),
+        "Synthetic Std": synthetic_data[numeric_features].std()
+    })
+
+    comparison["Mean Difference"] = (
+        comparison["Synthetic Mean"]
+        - comparison["Real Mean"]
+    ).abs()
+
+    st.dataframe(
+        comparison,
+        use_container_width=True
+    )
+
+    # --------------------------------------------------------
+    # MEAN COMPARISON CHART
+    # --------------------------------------------------------
+
+    st.subheader("Feature Mean Comparison")
+
+    mean_chart = comparison[
+        [
+            "Real Mean",
+            "Synthetic Mean"
+        ]
+    ]
+
+    st.bar_chart(
+        mean_chart
+    )
+
+    # --------------------------------------------------------
+    # RESEARCH INTERPRETATION
+    # --------------------------------------------------------
+
+    st.subheader("Research Interpretation")
+
+    st.info(
+        "The comparison evaluates whether the CTGAN-generated "
+        "synthetic data preserves important statistical "
+        "characteristics of the original training dataset. "
+        "Similar target distributions and feature statistics "
+        "indicate that the synthetic dataset retains useful "
+        "properties of the real data."
+    )
+    
+    # ============================================================
+# HOME PAGE
+# ============================================================
+
+if page == "🏠 Home":
+
+    st.header("Welcome")
+
+    st.write(
+        """
+        This research project investigates the use of
+        CTGAN-generated synthetic healthcare data for
+        heart disease prediction.
+        """
+    )
+
+    st.subheader("Project Workflow")
+
+    st.write(
+        """
+        1. UCI Heart Disease Dataset
+        2. Data Preprocessing
+        3. CTGAN Synthetic Data Generation
+        4. Real vs Synthetic Data Evaluation
+        5. Random Forest Prediction
+        6. Fair Model Comparison
+        7. SHAP Explainable AI
+        8. Heart Disease Prediction Web Application
+        """
+    )
+
+    st.subheader("Final Results")
+
+    st.write(
+        """
+        🥇 Real Data Model: 88.52% Accuracy
+
+        🧬 Synthetic Data Model: 85.25% Accuracy
+
+        🔀 Combined Model: 86.89% Accuracy
+        """
+    )

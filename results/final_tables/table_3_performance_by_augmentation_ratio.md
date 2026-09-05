@@ -1,0 +1,14 @@
+### Table 3: Classifier Performance Progression Across CTGAN Augmentation Levels (Logistic Regression)
+
+*Evaluated on quarantined held-out real test set (N=13,723). Demonstrates monotonic sensitivity gains up to 200% augmentation.*
+
+| Augmentation Ratio | Training Volume (N) | Accuracy | Precision | Recall (Sensitivity) | F1-Score | ROC-AUC |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0% | 54889 | 73.00% | 75.89% | 66.58% | 70.93% | 0.7959 |
+| 25% | 68611 | 72.78% | 74.44% | 68.51% | 71.36% | 0.7953 |
+| 50% | 82333 | 72.94% | 73.69% | 70.46% | 72.04% | 0.7938 |
+| 75% | 96055 | 72.60% | 72.78% | 71.28% | 72.02% | 0.7927 |
+| 100% | 109778 | 72.48% | 72.21% | 72.15% | 72.18% | 0.7918 |
+| 150% | 137222 | 72.27% | 71.45% | 73.23% | 72.33% | 0.7906 |
+| 200% | 164667 | 72.10% | 70.94% | 73.87% | 72.38% | 0.7894 |
+

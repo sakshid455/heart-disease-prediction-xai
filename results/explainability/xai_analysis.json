@@ -1,0 +1,203 @@
+{
+  "model": "Random Forest",
+  "global_explanation": {
+    "base_expected_value": 0.5578,
+    "samples_evaluated": 300,
+    "feature_ranking": [
+      {
+        "feature": "ap_hi",
+        "mean_abs_shap": 0.13447,
+        "relative_importance_percent": 34.58,
+        "rank": 1
+      },
+      {
+        "feature": "ap_lo",
+        "mean_abs_shap": 0.05751,
+        "relative_importance_percent": 14.79,
+        "rank": 2
+      },
+      {
+        "feature": "weight",
+        "mean_abs_shap": 0.05142,
+        "relative_importance_percent": 13.22,
+        "rank": 3
+      },
+      {
+        "feature": "age",
+        "mean_abs_shap": 0.05057,
+        "relative_importance_percent": 13.0,
+        "rank": 4
+      },
+      {
+        "feature": "cholesterol",
+        "mean_abs_shap": 0.0428,
+        "relative_importance_percent": 11.01,
+        "rank": 5
+      },
+      {
+        "feature": "height",
+        "mean_abs_shap": 0.01654,
+        "relative_importance_percent": 4.25,
+        "rank": 6
+      },
+      {
+        "feature": "active",
+        "mean_abs_shap": 0.01269,
+        "relative_importance_percent": 3.26,
+        "rank": 7
+      },
+      {
+        "feature": "gluc",
+        "mean_abs_shap": 0.01146,
+        "relative_importance_percent": 2.95,
+        "rank": 8
+      },
+      {
+        "feature": "gender",
+        "mean_abs_shap": 0.00589,
+        "relative_importance_percent": 1.52,
+        "rank": 9
+      },
+      {
+        "feature": "smoke",
+        "mean_abs_shap": 0.00309,
+        "relative_importance_percent": 0.8,
+        "rank": 10
+      },
+      {
+        "feature": "alco",
+        "mean_abs_shap": 0.00243,
+        "relative_importance_percent": 0.63,
+        "rank": 11
+      }
+    ]
+  },
+  "sample_local_explanation": {
+    "base_expected_value": 0.5578,
+    "attributions": [
+      {
+        "feature": "ap_hi",
+        "feature_value": 120.0,
+        "shap_value": -0.09104,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.09104
+      },
+      {
+        "feature": "age",
+        "feature_value": 51.6,
+        "shap_value": -0.05454,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.05454
+      },
+      {
+        "feature": "weight",
+        "feature_value": 107.0,
+        "shap_value": 0.0472,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.0472
+      },
+      {
+        "feature": "active",
+        "feature_value": 0.0,
+        "shap_value": 0.04606,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.04606
+      },
+      {
+        "feature": "ap_lo",
+        "feature_value": 80.0,
+        "shap_value": -0.03899,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.03899
+      },
+      {
+        "feature": "cholesterol",
+        "feature_value": 1.0,
+        "shap_value": -0.03891,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.03891
+      },
+      {
+        "feature": "gluc",
+        "feature_value": 1.0,
+        "shap_value": -0.01413,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.01413
+      },
+      {
+        "feature": "height",
+        "feature_value": 164.0,
+        "shap_value": -0.00262,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.00262
+      },
+      {
+        "feature": "gender",
+        "feature_value": 1.0,
+        "shap_value": -0.00244,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.00244
+      },
+      {
+        "feature": "smoke",
+        "feature_value": 0.0,
+        "shap_value": 0.00119,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.00119
+      },
+      {
+        "feature": "alco",
+        "feature_value": 0.0,
+        "shap_value": 0.00074,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.00074
+      }
+    ],
+    "top_positive_contributors": [
+      {
+        "feature": "weight",
+        "feature_value": 107.0,
+        "shap_value": 0.0472,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.0472
+      },
+      {
+        "feature": "active",
+        "feature_value": 0.0,
+        "shap_value": 0.04606,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.04606
+      },
+      {
+        "feature": "smoke",
+        "feature_value": 0.0,
+        "shap_value": 0.00119,
+        "direction": "Risk Increasing (+)",
+        "magnitude": 0.00119
+      }
+    ],
+    "top_negative_contributors": [
+      {
+        "feature": "ap_hi",
+        "feature_value": 120.0,
+        "shap_value": -0.09104,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.09104
+      },
+      {
+        "feature": "age",
+        "feature_value": 51.6,
+        "shap_value": -0.05454,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.05454
+      },
+      {
+        "feature": "ap_lo",
+        "feature_value": 80.0,
+        "shap_value": -0.03899,
+        "direction": "Risk Decreasing (-)",
+        "magnitude": 0.03899
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+Demographic Strata,Subgroup N,Baseline Recall (0%),Augmented Recall (200%),Sensitivity Surge,Baseline FNR,Augmented FNR,FNR Reduction
+Overall Held-out Cohort,"13,723",66.58%,73.87%,+7.29%,33.42%,26.13%,-7.29%
+Female Patients (gender=1),"9,016",66.33%,71.39%,+5.06%,33.67%,28.61%,-5.06%
+Male Patients (gender=2),"4,707",67.07%,78.60%,+11.53%,32.93%,21.40%,-11.53%
+Younger Cohort (< 50 years),"3,360",52.65%,62.33%,+9.68%,47.35%,37.67%,-9.68%
+Middle-Aged Cohort (50–59 years),"6,888",66.86%,74.00%,+7.14%,33.14%,26.00%,-7.14%
+Older Cohort (>= 60 years),"3,475",74.52%,81.39%,+6.87%,25.48%,18.61%,-6.87%

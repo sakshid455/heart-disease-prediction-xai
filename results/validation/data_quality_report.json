@@ -1,0 +1,203 @@
+{
+  "dataset_name": "UCI Cleveland Heart Disease",
+  "shape": {
+    "rows": 303,
+    "columns": 14,
+    "total_cells": 4242
+  },
+  "column_names": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal",
+    "num"
+  ],
+  "data_types": {
+    "age": "int64",
+    "sex": "int64",
+    "cp": "int64",
+    "trestbps": "int64",
+    "chol": "int64",
+    "fbs": "int64",
+    "restecg": "int64",
+    "thalach": "int64",
+    "exang": "int64",
+    "oldpeak": "float64",
+    "slope": "int64",
+    "ca": "float64",
+    "thal": "float64",
+    "num": "int64"
+  },
+  "missing_values": {
+    "total_missing": 6,
+    "missing_pct": 0.1414,
+    "by_column": {
+      "ca": {
+        "count": 4,
+        "percent": 1.3201320132013201
+      },
+      "thal": {
+        "count": 2,
+        "percent": 0.6600660066006601
+      }
+    }
+  },
+  "duplicate_rows": {
+    "count": 0,
+    "percent": 0.0
+  },
+  "invalid_values": {},
+  "numerical_features": {
+    "age": {
+      "min": 29.0,
+      "max": 77.0,
+      "mean": 54.43894389438944,
+      "std": 9.038662442446746,
+      "median": 56.0,
+      "q25": 48.0,
+      "q75": 61.0,
+      "skewness": -0.20906046882012877
+    },
+    "trestbps": {
+      "min": 94.0,
+      "max": 200.0,
+      "mean": 131.68976897689768,
+      "std": 17.59974772958769,
+      "median": 130.0,
+      "q25": 120.0,
+      "q75": 140.0,
+      "skewness": 0.7060346498131783
+    },
+    "chol": {
+      "min": 126.0,
+      "max": 564.0,
+      "mean": 246.69306930693068,
+      "std": 51.77691754263704,
+      "median": 241.0,
+      "q25": 211.0,
+      "q75": 275.0,
+      "skewness": 1.1355031533363453
+    },
+    "thalach": {
+      "min": 71.0,
+      "max": 202.0,
+      "mean": 149.6072607260726,
+      "std": 22.875003276980376,
+      "median": 153.0,
+      "q25": 133.5,
+      "q75": 166.0,
+      "skewness": -0.5374486699106463
+    },
+    "oldpeak": {
+      "min": 0.0,
+      "max": 6.2,
+      "mean": 1.0396039603960396,
+      "std": 1.1610750220686348,
+      "median": 0.8,
+      "q25": 0.0,
+      "q75": 1.6,
+      "skewness": 1.2697199306019966
+    }
+  },
+  "categorical_features": {
+    "exang": {
+      "unique_count": 2,
+      "frequencies": {
+        "0": 204,
+        "1": 99
+      }
+    },
+    "slope": {
+      "unique_count": 3,
+      "frequencies": {
+        "1": 142,
+        "2": 140,
+        "3": 21
+      }
+    },
+    "cp": {
+      "unique_count": 4,
+      "frequencies": {
+        "4": 144,
+        "3": 86,
+        "2": 50,
+        "1": 23
+      }
+    },
+    "thal": {
+      "unique_count": 4,
+      "frequencies": {
+        "3.0": 166,
+        "7.0": 117,
+        "6.0": 18,
+        "nan": 2
+      }
+    },
+    "fbs": {
+      "unique_count": 2,
+      "frequencies": {
+        "0": 258,
+        "1": 45
+      }
+    },
+    "restecg": {
+      "unique_count": 3,
+      "frequencies": {
+        "0": 151,
+        "2": 148,
+        "1": 4
+      }
+    },
+    "num": {
+      "unique_count": 5,
+      "frequencies": {
+        "0": 164,
+        "1": 55,
+        "2": 36,
+        "3": 35,
+        "4": 13
+      }
+    },
+    "ca": {
+      "unique_count": 5,
+      "frequencies": {
+        "0.0": 176,
+        "1.0": 65,
+        "2.0": 38,
+        "3.0": 20,
+        "nan": 4
+      }
+    },
+    "sex": {
+      "unique_count": 2,
+      "frequencies": {
+        "1": 206,
+        "0": 97
+      }
+    }
+  },
+  "target_analysis": {
+    "target_column": "num",
+    "classes": {
+      "0": 164,
+      "1": 55,
+      "2": 36,
+      "3": 35,
+      "4": 13
+    },
+    "majority_count": 164,
+    "minority_count": 13,
+    "imbalance_ratio": 12.615,
+    "entropy_balance": 0.795,
+    "is_balanced": false
+  }
+}

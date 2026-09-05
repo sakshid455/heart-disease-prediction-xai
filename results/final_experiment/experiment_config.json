@@ -1,0 +1,54 @@
+{
+  "experiment_title": "Adaptive CTGAN-Based Synthetic Data Augmentation for Explainable Heart Disease Prediction",
+  "execution_timestamp": "2026-08-30 11:28:54",
+  "primary_seed": 42,
+  "robustness_seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "train_test_split_ratio": 0.2,
+  "augmentation_ratios": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "ctgan_hyperparameters": {
+    "epochs": 20,
+    "batch_size": 500,
+    "pac": 10,
+    "generator_lr": 0.0002,
+    "discriminator_lr": 0.0002,
+    "generator_decay": 1e-06,
+    "discriminator_decay": 1e-06
+  },
+  "features": {
+    "numerical": [
+      "age",
+      "height",
+      "weight",
+      "ap_hi",
+      "ap_lo"
+    ],
+    "categorical": [
+      "gender",
+      "cholesterol",
+      "gluc",
+      "smoke",
+      "alco",
+      "active"
+    ],
+    "target": "cardio"
+  },
+  "utility_weights": {
+    "recall": 0.4,
+    "roc_auc": 0.3,
+    "f1_score": 0.3
+  }
+}

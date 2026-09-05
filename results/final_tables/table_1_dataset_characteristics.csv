@@ -1,0 +1,15 @@
+Variable,Data Type,"Full Cohort (N=68,612)","Training Set (80%, N=54,889)","Test Set (20%, N=13,723)"
+Total Cohort Size (N),Integer,"68,612","54,889","13,723"
+Age (years),Continuous,53.29 ± 6.76,53.30 ± 6.75,53.24 ± 6.79
+Female Sex (%),Binary,65.13%,64.99%,65.70%
+Male Sex (%),Binary,34.87%,35.01%,34.30%
+Height (cm),Continuous,164.39 ± 7.98,164.41 ± 7.97,164.32 ± 8.00
+Weight (kg),Continuous,74.12 ± 14.31,74.13 ± 14.30,74.08 ± 14.33
+"Systolic BP (ap_hi, mmHg)",Continuous,126.68 ± 16.69,126.68 ± 16.70,126.67 ± 16.68
+"Diastolic BP (ap_lo, mmHg)",Continuous,81.30 ± 9.43,81.29 ± 9.41,81.35 ± 9.52
+"Elevated Cholesterol (>=2, %)",Ordinal,25.02%,24.99%,25.12%
+"Elevated Glucose (>=2, %)",Ordinal,14.99%,14.92%,15.24%
+Active Smoker (%),Binary,8.80%,8.77%,8.93%
+Alcohol Intake (%),Binary,5.34%,5.32%,5.40%
+Physically Active (%),Binary,80.34%,80.23%,80.77%
+"Target: CVD Present (cardio=1, %)",Binary (Target),49.48%,49.48%,49.48%

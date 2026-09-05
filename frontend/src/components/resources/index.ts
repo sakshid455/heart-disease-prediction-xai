@@ -1,0 +1,7 @@
+export { ResourcesHero } from './ResourcesHero'
+export { FeaturedTopicsSection } from './FeaturedTopicsSection'
+export { ResourcesKnowledgeHub } from './ResourcesKnowledgeHub'
+export { ResourceCard } from './ResourceCard'
+export { ResourceDetailsModal } from './ResourceDetailsModal'
+export { RESOURCES_DATA } from './data'
+export type { ResourceCategory, ResourceItem } from './types'

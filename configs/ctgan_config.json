@@ -1,0 +1,29 @@
+{
+  "generator_dim": [256, 256],
+  "discriminator_dim": [256, 256],
+  "generator_lr": 0.0002,
+  "discriminator_lr": 0.0002,
+  "generator_decay": 0.000001,
+  "discriminator_decay": 0.000001,
+  "batch_size": 500,
+  "discriminator_steps": 1,
+  "log_frequency": true,
+  "verbose": false,
+  "epochs": 20,
+  "pac": 10,
+  "cuda": true,
+  "post_processing_bounds": {
+    "age": {"min": 18, "max": 100, "type": "int"},
+    "height": {"min": 120, "max": 220, "type": "float"},
+    "weight": {"min": 30, "max": 200, "type": "float"},
+    "ap_hi": {"min": 60, "max": 240, "type": "int"},
+    "ap_lo": {"min": 40, "max": 160, "type": "int"},
+    "gender": {"values": [1, 2], "type": "int"},
+    "cholesterol": {"values": [1, 2, 3], "type": "int"},
+    "gluc": {"values": [1, 2, 3], "type": "int"},
+    "smoke": {"values": [0, 1], "type": "int"},
+    "alco": {"values": [0, 1], "type": "int"},
+    "active": {"values": [0, 1], "type": "int"},
+    "cardio": {"values": [0, 1], "type": "int"}
+  }
+}

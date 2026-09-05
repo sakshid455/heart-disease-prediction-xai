@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "leakage_detected": true,
+  "metrics": {
+    "test_records_used_in_ctgan": 0,
+    "test_records_in_synthetic_data": 92,
+    "test_records_in_training_data": 260,
+    "training_records_in_synthetic_data": 452,
+    "test_data_used_for_preprocessing_fit": 0,
+    "target_leakage_features": []
+  },
+  "dataset_sizes": {
+    "training_records": 54889,
+    "testing_records": 13723,
+    "synthetic_records": 109778
+  },
+  "findings": [
+    "LEAKAGE CRITICAL: 260 identical records found in both Train and Test partitions.",
+    "LEAKAGE CRITICAL: 92 synthetic records exactly match test-set records."
+  ]
+}

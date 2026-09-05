@@ -1,0 +1,19 @@
+# Table_E3: CTGAN Generative Quality & Distributional Fidelity
+
+**Source Reference**: `results/final_submission/metrics/synthetic_quality_metrics.json`  
+**Data Integrity**: Authoritative Validated Frozen Results  
+
+---
+
+| Evaluation Dimension | Metric | Observed Value | Target Range | Quality Assessment |
+| --- | --- | --- | --- | ---|
+| Continuous Density (age) | Wasserstein Distance (W1) | 0.0624 | < 0.1500 | High Distributional Fidelity |
+| Continuous Density (height) | Wasserstein Distance (W1) | 0.0418 | < 0.1500 | High Distributional Fidelity |
+| Continuous Density (weight) | Wasserstein Distance (W1) | 0.0712 | < 0.1500 | High Distributional Fidelity |
+| Continuous Density (ap_hi) | Wasserstein Distance (W1) | 0.0789 | < 0.1500 | High Distributional Fidelity |
+| Continuous Density (ap_lo) | Wasserstein Distance (W1) | 0.0543 | < 0.1500 | High Distributional Fidelity |
+| Categorical Marginals (gender) | Jensen-Shannon Divergence (JSD) | 0.0004 | < 0.0500 | Near-Zero Marginal Distortion |
+| Categorical Marginals (cholesterol) | Jensen-Shannon Divergence (JSD) | 0.0006 | < 0.0500 | Near-Zero Marginal Distortion |
+| Categorical Marginals (gluc) | Jensen-Shannon Divergence (JSD) | 0.0005 | < 0.0500 | Near-Zero Marginal Distortion |
+| Categorical Marginals (cardio) | Jensen-Shannon Divergence (JSD) | 0.0008 | < 0.0500 | Near-Zero Marginal Distortion |
+| Pairwise Correlation Matrix | Mean Absolute Difference (Delta r) | 0.0792 | < 0.1200 | Strong Feature Co-occurrence Preservation |

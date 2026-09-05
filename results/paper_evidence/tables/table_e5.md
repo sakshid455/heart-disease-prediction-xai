@@ -1,0 +1,13 @@
+# Table_E5: Cross-Model Baseline vs. Optimal Augmented Performance Comparison
+
+**Source Reference**: `results/final_submission/metrics/adaptive_augmentation_results.csv`  
+**Data Integrity**: Authoritative Validated Frozen Results  
+
+---
+
+| Model Family | Baseline Ratio | Baseline Recall | Baseline F1 | Baseline ROC-AUC | Optimal Ratio | Optimal Recall | Optimal F1 | Optimal ROC-AUC | Recall Delta |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | ---|
+| Logistic Regression | 0% | 66.58% | 70.93% | 0.7959 | 0% | 66.58% | 70.93% | 0.7959 | +0.00% |
+| Random Forest | 0% | 67.81% | 71.98% | 0.8050 | 0% | 67.81% | 71.98% | 0.8050 | +0.00% |
+| SVM | 0% | 69.12% | 71.61% | 0.7907 | 0% | 69.12% | 71.61% | 0.7907 | +0.00% |
+| XGBoost | 0% | 68.39% | 72.09% | 0.8053 | 0% | 68.39% | 72.09% | 0.8053 | +0.00% |

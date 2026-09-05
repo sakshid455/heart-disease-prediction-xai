@@ -1,0 +1,13 @@
+{
+  "exact_duplicates": 41,
+  "exact_duplicate_percentage": 0.0373,
+  "mean_dcr_train": 0.6422,
+  "median_dcr_train": 0.5315,
+  "mean_dcr_test": 0.8655,
+  "median_dcr_test": 0.7201,
+  "mean_nndr": 0.7913,
+  "memorization_candidate_rate_pct": 0.6,
+  "smooth_manifold_interpolation_pct": 99.4,
+  "formal_differential_privacy_claimed": false,
+  "disclaimer": "Privacy is evaluated via empirical distance distributions; formal (epsilon, delta)-DP guarantees are not asserted."
+}
