@@ -116,25 +116,3 @@ npm run dev
 ```
 - Dashboard UI: `http://127.0.0.1:3000`
 
----
-
-## 📊 Publication Artifacts
-
-- **Tables Index**: [`results/final_tables/README.md`](file:///c:/Users/datir/predictive/results/final_tables/README.md)
-- **Figures Index**: [`results/final_figures/README.md`](file:///c:/Users/datir/predictive/results/final_figures/README.md)
-- **Master Findings**: [`results/final_experiment/FINAL_RESULTS.md`](file:///c:/Users/datir/predictive/results/final_experiment/FINAL_RESULTS.md)
-
----
-
-## 📜 License & Citation
-
-This project is licensed under the MIT License. If you use this methodology or codebase in your research, please cite:
-
-```bibtex
-@article{heartai2026,
-  title={Adaptive CTGAN-Based Synthetic Data Augmentation for Explainable Heart Disease Prediction},
-  author={Datir, Sakshi and Research Team},
-  year={2026},
-  journal={HeartAI Research Laboratory}
-}
-```
